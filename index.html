@@ -1712,7 +1712,13 @@
         }
 
         // --- EVENT LISTENERS ---
-        window.addEventListener('resize', () => { if (isGameStarted) init(); });
+        window.addEventListener('resize', () => {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+            if (isGameStarted) {
+                createStarfield();
+            }
+        });
         
         document.addEventListener('mousemove', e => { 
             cursorTarget.x = e.clientX; 
@@ -1720,7 +1726,7 @@
         });
 
         // Touch controls for mobile
-        document.addEventListener('touchstart', e => {
+        canvas.addEventListener('touchstart', e => {
             e.preventDefault();
             if (e.touches.length > 0) {
                 cursorTarget.x = e.touches[0].clientX;
@@ -1728,13 +1734,17 @@
             }
         }, { passive: false });
 
-        document.addEventListener('touchmove', e => {
+        canvas.addEventListener('touchmove', e => {
             e.preventDefault();
             if (e.touches.length > 0) {
                 cursorTarget.x = e.touches[0].clientX;
                 cursorTarget.y = e.touches[0].clientY;
             }
         }, { passive: false });
+        
+        canvas.addEventListener('touchend', e => {
+            e.preventDefault();
+        });
 
 
         window.addEventListener('keydown', e => {
@@ -1803,54 +1813,8 @@
             }
         });
 
-
-        // --- PWA Service Worker Registration ---
-        if ('serviceWorker' in navigator) {
-            const swJS = `
-                const CACHE_NAME = 'dragon-chase-v1';
-                const urlsToCache = [
-                    './',
-                    'https://cdnjs.cloudflare.com/ajax/libs/tone/14.7.77/Tone.js',
-                    'https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&display=swap'
-                ];
-
-                self.addEventListener('install', event => {
-                    event.waitUntil(
-                        caches.open(CACHE_NAME)
-                            .then(cache => {
-                                console.log('Opened cache');
-                                return cache.addAll(urlsToCache);
-                            })
-                    );
-                });
-
-                self.addEventListener('fetch', event => {
-                    event.respondWith(
-                        caches.match(event.request)
-                            .then(response => {
-                                if (response) {
-                                    return response;
-                                }
-                                return fetch(event.request);
-                            }
-                        )
-                    );
-                });
-            `;
-            const swBlob = new Blob([swJS], {type: 'application/javascript'});
-            const swUrl = URL.createObjectURL(swBlob);
-
-            window.addEventListener('load', () => {
-                navigator.serviceWorker.register(swUrl).then(registration => {
-                    console.log('ServiceWorker registration successful with scope: ', registration.scope);
-                }, err => {
-                    console.log('ServiceWorker registration failed: ', err);
-                });
-            });
-        }
-
         function setupForMobile() {
-            const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+            const isMobile = /Mobi|Android/i.test(navigator.userAgent);
             if (isMobile) {
                 document.getElementById('dash-status').style.display = 'none';
                 document.getElementById('controls-rule').innerHTML = '<strong>Controls:</strong> Move your finger to navigate. Tap the ⚡ button for Pushback.';
@@ -1860,8 +1824,10 @@
 
         // --- INITIAL LOAD ---
         startOverlay.addEventListener('click', async () => {
-            await Tone.start(); // Unlock audio context
-            Tone.Transport.start();
+            if (typeof Tone !== 'undefined' && Tone.context.state !== 'running') {
+                await Tone.start(); // Unlock audio context
+                Tone.Transport.start();
+            }
             startOverlay.style.display = 'none';
             
             loadGameData();
