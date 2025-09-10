@@ -77,3 +77,12 @@ Since this project uses no build tools or dependencies, running it is very strai
 1. **Clone the repository:**
    ```bash
    git clone https://github.com/Monish21072004/DRAGON-CHASE.git
+   ```
+<img width="1909" height="925" alt="image" src="https://github.com/user-attachments/assets/2cd50ca1-a476-4e74-882d-a5a7e819d9ea" />
+
+
+
+
+
+
+
