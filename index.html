@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-    <title>Wyrm Evasion</title>
+    <title>Dragon Chase</title>
     <!-- PWA Meta Tags -->
     <meta name="theme-color" content="#0d1a2f"/>
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <link rel="manifest" href="data:application/manifest+json;base64,ewogICJuYW1lIjogIld5cm0gRXZhc2lvbiIsCiAgInNob3J0X25hbWUiOiAiV3lybUV2YXNpb24iLAogICJpY29ucyI6IFsKICAgIHsKICAgICAgInNyYyI6ICJkYXRhOmltYWdlL3N2Zyt4bWw7YmFzZTY0,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48cmVjdCB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgcng9IjIwIiBmaWxsPSIjMGQxYTJmIi8+PHBhdGggZmlsbD0ibm9uZSIgc3Ryb2tlPSIjZmZkNzAwIiBzdHJva2Utd2lkdGg9IjUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgZD0iTSAzMCw3MCBDIDQwLDMwIDcwLDMwIDgwLDQwIFEgOTAsNTAgODAsNjAgQyA3MCw3MCA0MCw4MCAzMCw3MCBaIE0gODAsNDAgTCA4NSwzNSBNIDgwLDQwIEwgNzUsMzUgTSA2MCw0NSBBIDUgNSAwIDAgMSA2MCA1NSA1IDUgMCAwIDEgNjAgNDUgWiIgLz48L3N2Zz4iLAogICAgICAic2l6ZXMiOiAiMTkyeDE5MiIsCiAgICAgICJ0eXBlIjogImltYWdlL3N2Zyt4bWwiCiAgICB9LAogICAgewogICAgICAic3JjIjogImRhdGE6aW1hZ2Uvc3ZnK3htbDtiYXNlNjQ,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48cmVjdCB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgcng9IjIwIiBmaWxsPSIjMGQxYTJmIi8+PHBhdGggZmlsbD0ibm9uZSIgc3Ryb2tlPSIjZmZkNzAwIiBzdHJva2Utd2lkdGg9IjUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgZD0iTSAzMCw3MCBDIDQwLDMwIDcwLDMwIDgwLDQwIFEgOTAsNTAgODAsNjAgQyA3MCw3MCA0MCw4MCAzMCw3MCBaIE0gODAsNDAgTCA4NSwzNSBNIDgwLDQwIEwgNzUsMzUgTSA2MCw0NSBBIDUgNSAwIDAgMSA2MCA1NSA1IDUgMCAwIDEgNjAgNDUgWiIgLz48L3N2Zz4iLAogICAgICAic2l6ZXMiOiAiNTEyeDUxMiIsCiAgICAgICJ0eXBlIjogImltYWdlL3N2Zyt4bWwiCiAgICB9CiAgXSwKICAic3RhcnRfdXJsIjogIi4iLAogICJkaXNwbGF5IjogImZ1bGxzY3JlZW4iLAogICJiYWNrZ3JvdW5kX2NvbG9yIjogIiMwMDAwMDAiLAogICJ0aGVtZV9jb2xvciI6ICIjMGQxYTJmIgp9">
+    <link rel="manifest" href="data:application/manifest+json;base64,ewogICJuYW1lIjogIkRyYWdvbiBDaGFzZSIsCiAgInNob3J0X25hbWUiOiAiRHJhZ29uQ2hhc2UiLAogICJpY29ucyI6IFsKICAgIHsKICAgICAgInNyYyI6ICJkYXRhOmltYWdlL3N2Zyt4bWw7YmFzZTY0,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48cmVjdCB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgcng9IjIwIiBmaWxsPSIjMGQxYTJmIi8+PHBhdGggZmlsbD0ibm9uZSIgc3Ryb2tlPSIjZmZkNzAwIiBzdHJva2Utd2lkdGg9IjUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgZD0iTSAzMCw3MCBDIDQwLDMwIDcwLDMwIDgwLDQwIFEgOTAsNTAgODAsNjAgQyA3MCw3MCA0MCw4MCAzMCw3MCBaIE0gODAsNDAgTCA4NSwzNSBNIDgwLDQwIEwgNzUsMzUgTSA2MCw0NSBBIDUgNSAwIDAgMSA2MCA1NSA1IDUgMCAwIDEgNjAgNDUgWiIgLz48L3N2Zz4iLAogICAgICAic2l6ZXMiOiAiMTkyeDE5MiIsCiAgICAgICJ0eXBlIjogImltYWdlL3N2Zyt4bWwiCiAgICB9LAogICAgewogICAgICAic3JjIjogImRhdGE6aW1hZ2Uvc3ZnK3htbDtiYXNlNjQ,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48cmVjdCB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgcng9IjIwIiBmaWxsPSIjMGQxYTJmIi8+PHBhdGggZmlsbD0ibm9uZSIgc3Ryb2tlPSIjZmZkNzAwIiBzdHJva2Utd2lkdGg9IjUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgZD0iTSAzMCw3MCBDIDQwLDMwIDcwLDMwIDgwLDQwIFEgOTAsNTAgODAsNjAgQyA3MCw3MCA0MCw4MCAzMCw3MCBaIE0gODAsNDAgTCA4NSwzNSBNIDgwLDQwIEwgNzUsMzUgTSA2MCw0NSBBIDUgNSAwIDAgMSA2MCA1NSA1IDUgMCAwIDEgNjAgNDUgWiIgLz48L3N2Zz4iLAogICAgICAic2l6ZXMiOiAiNTEyeDUxMiIsCiAgICAgICJ0eXBlIjogImltYWdlL3N2Zyt4bWwiCiAgICB9CiAgXSwKICAic3RhcnRfdXJsIjogIi4iLAogICJkaXNwbGF5IjogImZ1bGxzY3JlZW4iLAogICJiYWNrZ3JvdW5kX2NvbG9yIjogIiMwMDAwMDAiLAogICJ0aGVtZV9jb2xvciI6ICIjMGQxYTJmIgp9">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&display=swap');
 
@@ -308,6 +308,28 @@
             25% { transform: translateX(-5px); }
             75% { transform: translateX(5px); }
         }
+
+        @media (max-width: 600px) {
+            #ui-container {
+                top: 10px;
+                left: 10px;
+                font-size: 14px;
+            }
+            .modal h1 {
+                font-size: 32px;
+            }
+             .modal p {
+                font-size: 16px;
+            }
+             .modal button {
+                padding: 12px 24px;
+                font-size: 16px;
+            }
+            #mobile-pushback {
+                padding: 15px;
+                font-size: 16px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -330,7 +352,7 @@
     </div>
 
     <div id="start-modal" class="modal">
-        <h1>WYRM EVASION</h1>
+        <h1>DRAGON CHASE</h1>
         <div class="main-menu-buttons">
             <button id="play-button">Play</button>
             <button id="shop-button">Shop</button>
@@ -411,6 +433,22 @@
         <p id="final-high-score">High Score: 0</p>
     </div>
     
+    <button id="mobile-pushback" style="
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        padding: 20px;
+        font-size: 18px;
+        border: none;
+        border-radius: 50%;
+        background: linear-gradient(145deg, #0077cc, #00aaff);
+        color: white;
+        box-shadow: 0 5px #0055aa;
+        z-index: 100;
+        display: none;
+        cursor: pointer;
+    ">⚡</button>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tone/14.7.77/Tone.js"></script>
     <script>
         const canvas = document.getElementById('gameCanvas');
@@ -429,6 +467,7 @@
         const coinsEarnedElement = document.getElementById('coins-earned');
         const restartButton = document.getElementById('restart-button');
         const mainMenuButton = document.getElementById('main-menu-button');
+        const mobilePushbackButton = document.getElementById('mobile-pushback');
         
         // --- MENU & MODAL BUTTONS ---
         const playButton = document.getElementById('play-button');
@@ -477,7 +516,7 @@
         let gameState = { 
             startTime: 0, difficulty: 1, score: 0, highScore: 0, coins: 0,
             multiplier: 1, comboTimer: 0, maxComboTime: 2000, coinDoubler: false,
-            cursorSize: 1.0, baseHitboxRadius: 25
+            cursorSize: 1.0, baseHitboxRadius: 35
         };
         let particles = [], orbs = [], mines = [], starfield = [], fireParticles = [], tailShockwaves = [];
         
@@ -1505,7 +1544,7 @@
                     coins: gameState.coins,
                     upgrades: upgrades
                 };
-                localStorage.setItem('wyrmEvasionGameData', JSON.stringify(data));
+                localStorage.setItem('dragonChaseGameData', JSON.stringify(data));
             } catch (e) {
                 console.error("Could not save game data.", e);
             }
@@ -1513,7 +1552,7 @@
 
         function loadGameData() {
             try {
-                const data = JSON.parse(localStorage.getItem('wyrmEvasionGameData'));
+                const data = JSON.parse(localStorage.getItem('dragonChaseGameData'));
                 if(data) {
                     gameState.highScore = data.highScore || 0;
                     gameState.coins = data.coins || 0;
@@ -1629,7 +1668,7 @@
         }
 
         function resetGameData() {
-            localStorage.removeItem('wyrmEvasionGameData');
+            localStorage.removeItem('dragonChaseGameData');
             gameState.highScore = 0;
             gameState.coins = 0;
             upgrades = {
@@ -1660,6 +1699,17 @@
             coinDisplay.textContent = `Coins: ${gameState.coins}`;
         }
 
+        function triggerDash() {
+            if (dash.ready && !isGameOver && !isPaused) {
+                playSound("F3", "8n");
+                dash.ready = false;
+                dash.timer = dash.cooldown;
+                const radius = dash.isMega ? 60 : 20;
+                const speed = dash.isMega ? 25 : 15;
+                dash.shockwave = { x: mouse.x, y: mouse.y, radius: radius, opacity: 1, speed: speed };
+                dash.isMega = false;
+            }
+        }
 
         // --- EVENT LISTENERS ---
         window.addEventListener('resize', () => { if (isGameStarted) init(); });
@@ -1688,14 +1738,8 @@
 
 
         window.addEventListener('keydown', e => {
-            if (e.code === 'Space' && dash.ready && !isGameOver && !isPaused) {
-                playSound("F3", "8n");
-                dash.ready = false;
-                dash.timer = dash.cooldown;
-                const radius = dash.isMega ? 60 : 20;
-                const speed = dash.isMega ? 25 : 15;
-                dash.shockwave = { x: mouse.x, y: mouse.y, radius: radius, opacity: 1, speed: speed };
-                dash.isMega = false;
+            if (e.code === 'Space') {
+                triggerDash();
             }
             if (e.code === 'KeyP' && isGameStarted && !isGameOver) {
                 isPaused = !isPaused;
@@ -1704,6 +1748,8 @@
                 else { Tone.Transport.start(); canvas.style.filter = 'none'; }
             }
         });
+
+        mobilePushbackButton.addEventListener('click', triggerDash);
 
         // MENU BUTTONS
         playButton.addEventListener('click', () => {
@@ -1761,7 +1807,7 @@
         // --- PWA Service Worker Registration ---
         if ('serviceWorker' in navigator) {
             const swJS = `
-                const CACHE_NAME = 'wyrm-evasion-v1';
+                const CACHE_NAME = 'dragon-chase-v1';
                 const urlsToCache = [
                     './',
                     'https://cdnjs.cloudflare.com/ajax/libs/tone/14.7.77/Tone.js',
@@ -1807,7 +1853,8 @@
             const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
             if (isMobile) {
                 document.getElementById('dash-status').style.display = 'none';
-                document.getElementById('controls-rule').innerHTML = '<strong>Controls:</strong> Move your finger to navigate. The Pushback ability is not available on mobile.';
+                document.getElementById('controls-rule').innerHTML = '<strong>Controls:</strong> Move your finger to navigate. Tap the ⚡ button for Pushback.';
+                mobilePushbackButton.style.display = 'block';
             }
         }
 
